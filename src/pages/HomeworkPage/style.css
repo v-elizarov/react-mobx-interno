@@ -1,0 +1,23 @@
+.homework-page {
+  display: flex;
+  gap: 10px;
+}
+
+.homework-page__select {
+  cursor: pointer;
+  font-family: "Jost";
+  border-radius: 20px;
+  width: 188px;
+  font-size: 18px;
+  padding-left: 20px;
+  border: 1px solid #292F36;
+}
+
+.homework-page__input {
+  font-family: "Jost";
+  border-radius: 20px;
+  width: 265px;
+  font-size: 18px;
+  padding-left: 20px;
+  border: 1px solid #292F36;
+}

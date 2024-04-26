@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Homework01Page from './pages/Homework01Page'
+import HomeworkPage from './pages/HomeworkPage'
 import HomePage from './pages/HomePage'
 import BlogPage from './pages/BlogPage'
 import BlogDetailsPage from './pages/BlogDetailsPage'
@@ -20,7 +20,7 @@ const App: React.FC = () => {
           <Route index element={<ProjectPage/>} />
           <Route path=':id' element={<ProjectDetailsPage/>} />
         </Route>
-        <Route path='/gb/homework01' element={<Homework01Page/>} />
+        <Route path='/gb/homework' element={<HomeworkPage/>} />
       </Routes>
     </BrowserRouter>
   )

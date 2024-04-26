@@ -1,0 +1,80 @@
+{
+  "menu": [
+    {"to":"/", "label":"Home"},
+    {"to":"/project", "label":"Project"},
+    {"to":"/blog", "label":"Blog"}
+  ],
+  "articles": [
+    {
+      "id":"a100",
+      "title": "Let’s Get Solution For Building Construction Work",
+      "category": "Kitchen",
+      "pic": "/src/assets/images/blog-mini/b1.png",
+      "date": "26 December,2022" 
+    },
+    {
+      "id":"a101",
+      "title": "Low Cost Latest Invented Interior Designing Ideas.",
+      "category": "Living Area",
+      "pic": "/src/assets/images/blog-mini/b2.png",
+      "date": "22 December,2022" 
+    },
+    {
+      "id":"a102",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Living Area",
+      "pic": "/src/assets/images/blog-mini/b3.png",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"a103",
+      "title": "Let’s Get Solution For Building Construction Work",
+      "category": "Kitchen Planning",
+      "pic": "/src/assets/images/blog-mini/b4.png",
+      "date": "26 December,2022" 
+    },
+    {
+      "id":"a104",
+      "title": "Low Cost Latest Invented Interior Designing Ideas.",
+      "category": "",
+      "pic": "/src/assets/images/blog-mini/b5.png",
+      "date": "22 December,2022" 
+    },
+    {
+      "id":"a105",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Architecture",
+      "pic": "/src/assets/images/blog-mini/b6.png",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"a106",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Architecture",
+      "pic": "/src/assets/images/blog-mini/b7.jpg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"a107",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Bedroom",
+      "pic": "/src/assets/images/blog-mini/b8.jpeg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"a108",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Bedroom",
+      "pic": "/src/assets/images/blog-mini/b9.jpg",
+      "date": "25 December,2022" 
+    }
+  ],
+  "categories": [
+    "Kitchen",
+    "Bedroom",
+    "Building",
+    "Architecture",
+    "Kitchen Planning",
+    "Living Area"
+  ]
+}

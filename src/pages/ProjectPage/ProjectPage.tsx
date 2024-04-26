@@ -1,10 +1,16 @@
 import React from 'react'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 
 export interface IProjectPageProps {}
 
 const ProjectPage: React.FC<IProjectPageProps> = () => {
   return (
-    <div>Project Page</div>
+    <React.Fragment>
+      <Header/>
+
+      <Footer/>
+    </React.Fragment>
   )
 }
 
