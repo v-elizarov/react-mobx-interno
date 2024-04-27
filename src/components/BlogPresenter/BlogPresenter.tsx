@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react-lite'
-import { IBlogArticle } from '../../types/blog-article'
-import BlogPresenterArticle from '../BlogPresenterArticle'
+import { IBlogArticle } from '@/types/blog-article'
+import BlogPresenterArticle from '@components/BlogPresenterArticle'
 
 export interface IBlogPresenterProps {
   isCompactModeEnabled?: boolean,

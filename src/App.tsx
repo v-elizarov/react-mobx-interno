@@ -11,16 +11,16 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomePage/>} />
-        <Route path='blog'>
-          <Route index element={<BlogPage/>} />
-          <Route path=':id' element={<BlogDetailsPage/>} />
+        <Route path={`${GIT_REP}`}>
+          <Route index element={<HomePage/>}/>
+          <Route path='blog' element={<BlogPage/>}>
+            <Route path=':id' element={<BlogDetailsPage/>}/>
+          </Route>
+          <Route path='project' element={<ProjectPage/>}>
+            <Route path=':id' element={<ProjectDetailsPage/>}/>
+          </Route>
+          <Route path='gb/homework' element={<HomeworkPage/>}/>
         </Route>
-        <Route path='project'>
-          <Route index element={<ProjectPage/>} />
-          <Route path=':id' element={<ProjectDetailsPage/>} />
-        </Route>
-        <Route path='/gb/homework' element={<HomeworkPage/>} />
       </Routes>
     </BrowserRouter>
   )

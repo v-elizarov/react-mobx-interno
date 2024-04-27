@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Input from '../../UI/Input'
-import BlogPresenter from '../../components/BlogPresenter'
-import { useStore } from '../../store'
-import { categories } from '../../assets/data.json'
-import Button from '../../UI/Button'
-import './style.css'
-import { IBlogArticle } from '../../types/blog-article'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import Input from '@/UI/Input'
+import BlogPresenter from '@components/BlogPresenter'
+import { useStore } from '@/store'
+import { categories } from '@assets/data.json'
+import Button from '@/UI/Button'
+import { IBlogArticle } from '@/types/blog-article'
 import { toJS } from 'mobx'
+import './style.css'
+
 
 export interface IHomeworkPageProps {}
 
@@ -24,7 +25,7 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
         id: Date.now().toString(),
         title,
         category,
-        pic: '/src/assets/images/blog-mini/placeholder.jpg',
+        pic: 'placeholder.jpg',
         date: 'recent',
       }
       console.log(category)

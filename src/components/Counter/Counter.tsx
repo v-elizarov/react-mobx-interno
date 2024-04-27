@@ -1,11 +1,9 @@
 import React from 'react'
 
-export interface ICounterProps {
 
-}
+export interface ICounterProps {}
 
-const Counter: React.FC<ICounterProps> = (props) => {
-
+const Counter: React.FC<ICounterProps> = () => {
   return (
     <div className="counter-area">
       <div className="wrapper">

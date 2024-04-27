@@ -1,9 +1,9 @@
 import React from 'react'
-import RightArrowAlternateSvg from '../../assets/svg/rightArrowAlternate.svg?react'
-import './style.css'
-import Button from '../../UI/Button'
+import RightArrowAlternateSvg from '@assets/svg/rightArrowAlternate.svg?react'
+import Button from '@/UI/Button'
 import { useNavigate } from 'react-router-dom'
-import { IBlogArticle } from '../../types/blog-article'
+import { IBlogArticle } from '@/types/blog-article'
+import './style.css'
 
 export interface IBlogPresenterArticleProps {
     article: IBlogArticle,
@@ -14,7 +14,7 @@ const BlogPresenterArticle: React.FC<IBlogPresenterArticleProps> = (props) => {
   const navigate = useNavigate()
 
   const buttonHandler = () => {
-    navigate(`/blog/${props.article.id}`)
+    navigate(`/react-mobx-interno/blog/${props.article.id}`)
   }
 
   const buttonClasses = ['btn', 'project__btn']
@@ -23,7 +23,7 @@ const BlogPresenterArticle: React.FC<IBlogPresenterArticleProps> = (props) => {
   return (
     <article className={props.hasAccent ? 'post-preview post-preview_accent': 'post-preview'}>
         <div className="post-preview__arc">
-            <img src={new URL(props.article.pic, import.meta.url).href} alt="" className="post-preview__image"/>
+            <img src={new URL(`../../assets/images/blog-mini/${props.article.pic}`, import.meta.url).href} alt="" className="post-preview__image"/>
             <span className="post-preview__category">{props.article.category}</span>
         </div>
         <h3 className="heading-s post-preview__title">

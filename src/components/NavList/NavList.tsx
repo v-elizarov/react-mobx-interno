@@ -1,18 +1,18 @@
 import React from 'react'
-import { INavLink } from '../../types/nav-link'
-import NavPanelItem from '../NavPanelItem'
+import { INavLink } from '@/types/nav-link'
+import NavListItem from '@components/NavListItem'
 
-export interface INavPanelProps {
+export interface INavListProps {
   classNames?: string[]
   itemClasses?: string[]
   data: INavLink[]
   separator?: string
 }
 
-const NavPanel: React.FC<INavPanelProps> = (props) => {
+const NavList: React.FC<INavListProps> = (props) => {
   const items = props.data.map((item, index) => {
     const element = (
-      <NavPanelItem 
+      <NavListItem 
         key={`${item.label}-${index}`} 
         item={item}
         classNames={props.itemClasses}
@@ -37,4 +37,4 @@ const NavPanel: React.FC<INavPanelProps> = (props) => {
   )
 }
 
-export default NavPanel
+export default NavList

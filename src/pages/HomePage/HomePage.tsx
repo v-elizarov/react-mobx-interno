@@ -1,12 +1,13 @@
 import React from 'react'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Promo from '../../components/Promo'
-import Counter from '../../components/Counter'
-import ProjectsSection from '../../modules/ProjectsSection'
-import BlogPresenter from '../../components/BlogPresenter'
-import { articles } from '../../assets/data.json'
-import Heading from '../../components/Heading'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import Promo from '@components/Promo'
+import Counter from '@components/Counter'
+import ProjectsSection from '@/modules/ProjectsSection'
+import BlogPresenter from '@components/BlogPresenter'
+import { articles } from '@assets/data.json'
+import Heading from '@components/Heading'
+
 
 export interface IHomePageProps {}
 

@@ -1,10 +1,11 @@
 import React from 'react'
-import Logo from '../../UI/Logo'
+import Logo from '@/UI/Logo'
 import { Link } from 'react-router-dom'
-import TwitterSvg from '../../assets/svg/twitter.svg?react'
-import LinkedinSvg from '../../assets/svg/linkedin.svg?react'
-import { menu } from '../../assets/data.json'
-import NavPanel from '../NavPanel'
+import TwitterSvg from '@assets/svg/twitter.svg?react'
+import LinkedinSvg from '@assets/svg/linkedin.svg?react'
+import { menu } from '@assets/data.json'
+import NavList from '@components/NavList'
+
 
 export interface IFooterProps {}
 
@@ -34,7 +35,7 @@ const Footer: React.FC<IFooterProps> = () => {
               </div>
               <div className="footer__col">
                 <h5 className="heading-s footer__heading">Pages</h5>
-                <NavPanel 
+                <NavList 
                   classNames={['footer__pages']} 
                   itemClasses={['text-m']}
                   data={menu}

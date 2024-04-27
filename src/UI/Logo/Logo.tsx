@@ -6,7 +6,7 @@ export interface ILogoProps {}
 
 const Logo: React.FC<ILogoProps> = () => {
   return (
-    <Link to="/" className='logo'>
+    <Link to={GIT_REP} className='logo'>
       <LogoSvg/>
       <span className='logo__label'>
         Interno

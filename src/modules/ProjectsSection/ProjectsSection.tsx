@@ -1,14 +1,11 @@
 import React from 'react'
-import RightArrowAlternateSvg from '../../assets/svg/rightArrowAlternate.svg?react'
-import Button from '../../UI/Button'
-import { useNavigate } from 'react-router-dom'
-import Heading from '../../components/Heading'
+import RightArrowAlternateSvg from '@assets/svg/rightArrowAlternate.svg?react'
+import Heading from '@components/Heading'
 
-export interface IProjectsSectionProps {
 
-}
+export interface IProjectsSectionProps {}
 
-const ProjectsSection: React.FC<IProjectsSectionProps> = (props) => {
+const ProjectsSection: React.FC<IProjectsSectionProps> = () => {
   // const navigate = useNavigate()
 
   // const buttonHandler = () => {

@@ -1,17 +1,16 @@
 import React from 'react'
-import RightArrowSvg from '../../assets/svg/rightArrow.svg?react'
-import Button from '../../UI/Button'
+import RightArrowSvg from '@assets/svg/rightArrow.svg?react'
+import Button from '@/UI/Button'
 import { useNavigate } from 'react-router-dom'
 
-export interface IPromoProps {
 
-}
+export interface IPromoProps {}
 
-const Promo: React.FC<IPromoProps> = (props) => {
+const Promo: React.FC<IPromoProps> = () => {
   const navigate = useNavigate()
 
   const buttonHandler = () => {
-    navigate('/gb/homework')
+    navigate('/react-mobx-interno/gb/homework')
   }
 
   return (
