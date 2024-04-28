@@ -1,27 +1,28 @@
-import { IBlogArticle } from '../types/blog-article'
-import { articles } from '../assets/data.json'
+import { IBlogArticle } from '@/types/blog-article'
+import { articles } from '@assets/data.json'
 import { action, computed, makeObservable, observable } from 'mobx'
 
 class BlogPresenterStore {
   articles: IBlogArticle[] = []
-  filter: string[] = ['Kitchen', 'Bedroom']
+  filter: string[] = []
+
+  get filteredArticles() {
+    if (this.filter.length === 0) {
+      return this.articles
+    }
+    return this.articles.filter(acticle => this.filter.indexOf(acticle.category) !== -1)
+  }
 
   constructor(articles: IBlogArticle[]) {
     this.articles = articles
     makeObservable(this, {
       articles: observable,
+      filter: observable,
       filteredArticles: computed,
       toggleFilter: action,
-      emptyFilter: action
+      emptyFilter: action,
+      addArticle: action,
     })
-  }
-
-  get filteredArticles() {
-    if (this.filter.length === 0) {
-      // return all articles
-      return this.articles
-    }
-    return this.articles.filter(article => this.filter.includes(article.category))
   }
 
   toggleFilter = (category: string) => {
@@ -33,7 +34,6 @@ class BlogPresenterStore {
       // toggle up
       this.filter.push(category)
     }
-    console.log(this.filter)
   }
 
   emptyFilter() {

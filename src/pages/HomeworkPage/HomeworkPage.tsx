@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import Input from '@/UI/Input'
 import BlogPresenter from '@components/BlogPresenter'
 import { useStore } from '@/store'
 import { categories } from '@assets/data.json'
 import Button from '@/UI/Button'
 import { IBlogArticle } from '@/types/blog-article'
-import { toJS } from 'mobx'
 import './style.css'
+import AsideArea from '@/components/AsideArea'
+import AsideBlock from '@/components/AsideBlock'
+import CategoryPicker from '@/components/CategoryPicker'
+import { observer } from 'mobx-react-lite'
 
 
 export interface IHomeworkPageProps {}
@@ -28,7 +30,6 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
         pic: 'placeholder.jpg',
         date: 'recent',
       }
-      console.log(category)
       setTitle('')
       BlogPresenterStore.addArticle(newArticle)
     }
@@ -85,25 +86,15 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
                     </Button>
                   </div>
                   <BlogPresenter 
-                    articles={toJS(BlogPresenterStore.articles)}
+                    articles={BlogPresenterStore.filteredArticles}
                     articlesInOneRow={2}
                   />
                 </section>
-                <aside className="blog-content-sidebar">
-                  <section className="blog-content-sidebar__container">
-                    <h3 className="heading-s">Tags</h3>
-                        <div className="blog-content-sidebar__content">
-                            <div className="pick-categories">
-                              <Input type='checkbox' name='category' label='Kitchen'/>
-                              <Input type='checkbox' name='category' label='Bedroom'/>
-                              <Input type='checkbox' name='category' label='Building'/>
-                              <Input type='checkbox' name='category' label='Architecture'/>
-                              <Input type='checkbox' name='category' label='Kitchen Planning'/>
-                              <Input type='checkbox' name='category' label='Living Area'/>
-                            </div>
-                        </div>
-                  </section>
-                </aside>
+                <AsideArea>
+                  <AsideBlock heading='Tags'>
+                      <CategoryPicker/>
+                  </AsideBlock>
+                </AsideArea>
             </div>
         </div>
       </div>
@@ -112,4 +103,4 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
   )
 }
 
-export default HomeworkPage
+export default observer(HomeworkPage) 

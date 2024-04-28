@@ -36,7 +36,7 @@
     {
       "id":"a104",
       "title": "Low Cost Latest Invented Interior Designing Ideas.",
-      "category": "",
+      "category": "Building",
       "pic": "b5.png",
       "date": "22 December,2022" 
     },
@@ -66,6 +66,69 @@
       "title": "Best For Any Office & Business Interior Solution",
       "category": "Bedroom",
       "pic": "b9.jpg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"b100",
+      "title": "Let’s Get Solution For Building Construction Work",
+      "category": "Kitchen",
+      "pic": "b2.png",
+      "date": "26 December,2022" 
+    },
+    {
+      "id":"b101",
+      "title": "Low Cost Latest Invented Interior Designing Ideas.",
+      "category": "Living Area",
+      "pic": "b3.png",
+      "date": "22 December,2022" 
+    },
+    {
+      "id":"b102",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Living Area",
+      "pic": "b4.png",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"b103",
+      "title": "Let’s Get Solution For Building Construction Work",
+      "category": "Kitchen Planning",
+      "pic": "b5.png",
+      "date": "26 December,2022" 
+    },
+    {
+      "id":"b104",
+      "title": "Low Cost Latest Invented Interior Designing Ideas.",
+      "category": "Building",
+      "pic": "b6.png",
+      "date": "22 December,2022" 
+    },
+    {
+      "id":"b105",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Architecture",
+      "pic": "b7.jpg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"b106",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Architecture",
+      "pic": "b8.jpeg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"b107",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Bedroom",
+      "pic": "b9.jpg",
+      "date": "25 December,2022" 
+    },
+    {
+      "id":"b108",
+      "title": "Best For Any Office & Business Interior Solution",
+      "category": "Bedroom",
+      "pic": "b1.png",
       "date": "25 December,2022" 
     }
   ],

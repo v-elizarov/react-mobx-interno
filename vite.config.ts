@@ -3,14 +3,15 @@ import react from '@vitejs/plugin-react'
 import svgr from 'vite-plugin-svgr'
 import path from 'path'
 
-
+// Put your repo name
+// between slahes like '/repo/'
 const gitRepositoryName = '/react-mobx-interno/'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: gitRepositoryName,
   define: {
-    GIT_REP: gitRepositoryName
+    GIT_REP: JSON.stringify(gitRepositoryName)
   },
   resolve: {
     alias: {
