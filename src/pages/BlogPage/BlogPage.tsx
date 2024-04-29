@@ -10,18 +10,28 @@ import LatestPost from '@components/LatestPost'
 import SiteContainer from '@components/SiteContainer'
 import Heading from '@components/Heading'
 import ContentArea from '@components/ContentArea'
-import DividedContainer from '@/components/DividedContainer'
+import DividedContainer from '@components/DividedContainer'
 import InfiniteBlogPresenter from '@/modules/InfiniteBlogPresenter'
+import Banner from '@components/Banner'
 
 
 export interface IBlogPageProps {}
 
 const BlogPage: React.FC<IBlogPageProps> = () => {
   const { BlogPresenterStore } = useStore()
+  const headerImageURL = new URL('../../assets/images/banners/banner1.jpg', import.meta.url)
 
   return (
     <React.Fragment>
-      <Header/>
+      <Header>
+        <Banner 
+          imageURL={headerImageURL}
+          showPanel
+          heading='Articles & News'
+          level={1}
+          headingClassNames={['heading-m']}
+        />
+      </Header>
       <SiteContainer classNames={['latest-post-area']}>
         <Heading 
             heading='Latest Post' 

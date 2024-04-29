@@ -19,7 +19,7 @@ const NavList: React.FC<INavListProps> = (props) => {
       />
     )
 
-    if (props.separator && index % 2 === 0) {
+    if (props.separator && index !== 0) {
       return (
         <React.Fragment>
           <li>{props.separator}</li>

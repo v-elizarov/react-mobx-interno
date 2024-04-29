@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Logo from '@/UI/Logo'
 import NavList from '@/components/NavList'
 import { menu } from '@assets/data.json'
 
-export interface IHeaderProps {}
+export interface IHeaderProps {
+  children?: ReactNode | ReactNode[]
+}
 
-const Header: React.FC<IHeaderProps> = () => {
+const Header: React.FC<IHeaderProps> = ({ children }) => {
   return (
     <div className="header-area">
         <div className="wrapper">
@@ -20,6 +22,7 @@ const Header: React.FC<IHeaderProps> = () => {
               </div>
             </header>
         </div>
+        { children }
     </div>
   )
 }
