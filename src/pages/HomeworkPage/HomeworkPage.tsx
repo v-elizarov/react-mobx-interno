@@ -11,6 +11,9 @@ import AsideArea from '@/components/AsideArea'
 import AsideBlock from '@/components/AsideBlock'
 import CategoryPicker from '@/components/CategoryPicker'
 import { observer } from 'mobx-react-lite'
+import SiteContainer from '@components/SiteContainer'
+import DividedContainer from '@components/DividedContainer'
+import ContentArea from '@components/ContentArea'
 
 
 export interface IHomeworkPageProps {}
@@ -50,54 +53,52 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
   return (
     <React.Fragment>
       <Header/>
-      <div className="blog-content-area">
-        <div className="wrapper">
-            <div className="blog-content">
-                <section className="blog-content-feed">
-                  <div className='homework-page'>
-                    <input 
-                      type='text' 
-                      className='homework-page__input' 
-                      placeholder='Article title'
-                      value={title} 
-                      onChange={handleChange}
-                    />
-                    <select className='homework-page__select' onChange={selectChange}>
-                      {
-                        categories.map(meta => (
-                          <option key={meta} value={meta}>
-                            {meta}
-                          </option>
-                          )
-                        )
-                      }
-                    </select>
-                    <Button
-                      classNames={['btn', 'btn-primary', 'promo__btn']}
-                      handler={addHandler}
-                    >
-                      <span>+</span>
-                    </Button>
-                    <Button
-                      classNames={['btn', 'btn-primary', 'promo__btn']}
-                      handler={magicButtonHandler}
-                    >
-                      <span>{magicButtonText}</span>
-                    </Button>
-                  </div>
-                  <BlogPresenter 
-                    articles={BlogPresenterStore.filteredArticles}
-                    articlesInOneRow={2}
-                  />
-                </section>
-                <AsideArea>
-                  <AsideBlock heading='Tags'>
-                      <CategoryPicker/>
-                  </AsideBlock>
-                </AsideArea>
+      <SiteContainer classNames={['blog-content-area']}>
+        <DividedContainer>
+          <ContentArea>
+            <div className='homework-page'>
+              <input 
+                type='text' 
+                className='homework-page__input' 
+                placeholder='Article title'
+                value={title} 
+                onChange={handleChange}
+              />
+              <select className='homework-page__select' onChange={selectChange}>
+                {
+                  categories.map(meta => (
+                    <option key={meta} value={meta}>
+                      {meta}
+                    </option>
+                    )
+                  )
+                }
+              </select>
+              <Button
+                classNames={['btn', 'btn-primary', 'promo__btn']}
+                handler={addHandler}
+              >
+                <span>+</span>
+              </Button>
+              <Button
+                classNames={['btn', 'btn-primary', 'promo__btn']}
+                handler={magicButtonHandler}
+              >
+                <span>{magicButtonText}</span>
+              </Button>
             </div>
-        </div>
-      </div>
+            <BlogPresenter 
+              articles={BlogPresenterStore.filteredArticles}
+              articlesInOneRow={2}
+            />
+          </ContentArea>
+          <AsideArea>
+            <AsideBlock heading='Tags'>
+                <CategoryPicker/>
+            </AsideBlock>
+          </AsideArea>
+        </DividedContainer>
+      </SiteContainer>
       <Footer/>
     </React.Fragment>
   )
