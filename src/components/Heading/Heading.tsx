@@ -28,7 +28,11 @@ const Heading: React.FC<IHeadingProps> = (props) => {
     )
   }
 
-  return element
+  return (
+    <div className={props.classNames && props.classNames.join(' ')}>
+      { element }
+    </div>
+  )
 }
 
 export default Heading

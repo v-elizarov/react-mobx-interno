@@ -14,7 +14,7 @@ const BlogPresenterArticle: React.FC<IBlogPresenterArticleProps> = (props) => {
   const navigate = useNavigate()
 
   const buttonHandler = () => {
-    navigate(`/react-mobx-interno/blog/${props.article.id}`)
+    navigate(`${GIT_REP}blog/${props.article.id}`)
   }
 
   const buttonClasses = ['btn', 'project__btn']

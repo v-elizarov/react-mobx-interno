@@ -13,12 +13,10 @@ const App: React.FC = () => {
       <Routes>
         <Route path={`${GIT_REP}`}>
           <Route index element={<HomePage/>}/>
-          <Route path='blog' element={<BlogPage/>}>
-            <Route path=':id' element={<BlogDetailsPage/>}/>
-          </Route>
-          <Route path='project' element={<ProjectPage/>}>
-            <Route path=':id' element={<ProjectDetailsPage/>}/>
-          </Route>
+          <Route path='blog' element={<BlogPage/>}/>
+          <Route path='blog/:id' element={<BlogDetailsPage/>}/>         
+          <Route path='project' element={<ProjectPage/>}/>
+          <Route path='project/:id' element={<ProjectDetailsPage/>}/>
           <Route path='gb/homework' element={<HomeworkPage/>}/>
         </Route>
       </Routes>
