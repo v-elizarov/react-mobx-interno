@@ -3,6 +3,11 @@ import Footer from '@components/Footer'
 import Banner from '@components/Banner'
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import SiteContainer from '@components/SiteContainer'
+import DividedContainer from '@components/DividedContainer'
+import ContentArea from '@components/ContentArea'
+import AsideArea from '@components/AsideArea'
+import BlogArticle from '@components/BlogArticle'
 
 
 export interface IBlogDetailsPageProps {}
@@ -22,6 +27,15 @@ const BlogDetailsPage: React.FC = () => {
           headingClassNames={['heading-m']}
         />
       </Header>
+      <SiteContainer classNames={['blog-content-area']}>
+        <DividedContainer>
+          <ContentArea>
+            <BlogArticle articleID={id}/>
+          </ContentArea>
+          <AsideArea>
+          </AsideArea>
+        </DividedContainer>
+      </SiteContainer>
       <Footer/>
     </React.Fragment>
   )

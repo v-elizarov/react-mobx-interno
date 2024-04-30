@@ -6,7 +6,7 @@ import BlogPresenterArticle from '@components/BlogPresenterArticle'
 export interface IBlogPresenterProps {
   isCompactModeEnabled?: boolean,
   articles: IBlogArticle[],
-  articlesInOneRow?: number 
+  articlesInOneRow: number 
 }
 
 const BlogPresenter: React.FC<IBlogPresenterProps> = (props) => {
@@ -15,7 +15,7 @@ const BlogPresenter: React.FC<IBlogPresenterProps> = (props) => {
       <BlogPresenterArticle 
         key={article.id}
         article={article} 
-        hasAccent={(index + 1) % 2 === 0}
+        hasAccent={props.articlesInOneRow % 2 === 0 ? index % 3 === 0 : ++index % 2 === 0}
       />
     )
   })

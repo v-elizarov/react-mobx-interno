@@ -1,0 +1,9 @@
+.post-feed {
+  margin-top: 25px;
+}
+
+.post-target__image {
+  width: 799px;
+  height: 539px;
+  object-fit: cover;
+}

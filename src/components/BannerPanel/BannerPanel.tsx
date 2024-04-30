@@ -1,6 +1,6 @@
 import React from 'react'
-import Breadcrumbs from '../Breadcrumbs'
-import Heading, { IHeadingProps } from '../Heading'
+import Breadcrumbs from '@components/Breadcrumbs'
+import Heading, { IHeadingProps } from '@components/Heading'
 
 
 export interface IBannerPanelProps extends IHeadingProps {}
