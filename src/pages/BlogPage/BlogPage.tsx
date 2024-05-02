@@ -13,6 +13,7 @@ import ContentArea from '@components/ContentArea'
 import DividedContainer from '@components/DividedContainer'
 import InfiniteBlogPresenter from '@/modules/InfiniteBlogPresenter'
 import Banner from '@components/Banner'
+import { blogCategories } from '@assets/data.json'
 
 
 export interface IBlogPageProps {}
@@ -54,7 +55,14 @@ const BlogPage: React.FC<IBlogPageProps> = () => {
                 <p className='text-s'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis perferendis voluptates perspiciatis possimus, soluta voluptatibus dolorem saepe, ipsam quam fuga ea, assumenda ut exercitationem sapiente ipsa. Rerum nam nesciunt veniam.</p>
             </AsideBlock>
             <AsideBlock heading='Tags'>
-                <CategoryPicker/>
+              <CategoryPicker
+                categories={blogCategories}
+                type='checkbox'
+                name='blog-filter'
+                ownClassNames={['pick-categories']}
+                onPressHandler={(category) => BlogPresenterStore.toggleFilter(category)}
+                filter={BlogPresenterStore.filter}
+              />
             </AsideBlock>
           </AsideArea>
         </DividedContainer>

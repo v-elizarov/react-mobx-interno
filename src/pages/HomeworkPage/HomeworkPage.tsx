@@ -3,7 +3,7 @@ import Header from '@components/Header'
 import Footer from '@components/Footer'
 import BlogPresenter from '@components/BlogPresenter'
 import { useStore } from '@/store'
-import { categories } from '@assets/data.json'
+import { blogCategories } from '@assets/data.json'
 import Button from '@/UI/Button'
 import { IBlogArticle } from '@/types/blog-article'
 import './style.css'
@@ -22,7 +22,7 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
   const { BlogPresenterStore } = useStore()
   const [magicButtonText, setMagicButtonText] = useState('Перевернуть')
   const [title, setTitle] = useState('')
-  const [category, setCategory] = useState(categories[0])
+  const [category, setCategory] = useState(blogCategories[0])
 
   const addHandler = () => {
     if (title) {
@@ -66,7 +66,7 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
               />
               <select className='homework-page__select' onChange={selectChange}>
                 {
-                  categories.map(meta => (
+                  blogCategories.map(meta => (
                     <option key={meta} value={meta}>
                       {meta}
                     </option>
@@ -94,7 +94,14 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
           </ContentArea>
           <AsideArea>
             <AsideBlock heading='Tags'>
-                <CategoryPicker/>
+              <CategoryPicker
+                categories={blogCategories}
+                type='checkbox'
+                name='blog-filter'
+                ownClassNames={['pick-categories']}
+                onPressHandler={(category) => BlogPresenterStore.toggleFilter(category)}
+                filter={BlogPresenterStore.filter}
+              />
             </AsideBlock>
           </AsideArea>
         </DividedContainer>

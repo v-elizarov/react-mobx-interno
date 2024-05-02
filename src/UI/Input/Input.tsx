@@ -7,6 +7,7 @@ export interface IInputProps {
   label: string
   isChecked?: boolean 
   onChange: () => void
+  classNames?: string[]
 }
 
 const Input: React.FC<IInputProps> = (props) => {
@@ -20,7 +21,7 @@ const Input: React.FC<IInputProps> = (props) => {
         checked={props.isChecked} 
         onChange={props.onChange}
       />
-      <label htmlFor={inputID}>{props.label}</label>
+      <label htmlFor={inputID} className={props.classNames && props.classNames.join(' ')}>{props.label}</label>
     </React.Fragment>
   )
 }

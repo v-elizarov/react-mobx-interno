@@ -139,11 +139,17 @@
       "date": "26 December,2022" 
     }
   ],
-  "categories": [
+  "blogCategories": [
     "Kitchen",
     "Bedroom",
     "Building",
     "Architecture",
+    "Kitchen Planning",
+    "Living Area"
+  ],
+  "projectCategories": [
+    "Kitchen",
+    "Bedroom",
     "Kitchen Planning",
     "Living Area"
   ]

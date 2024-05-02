@@ -457,7 +457,7 @@ body {
   position: relative;
 }
 .gallery .project_star::after {
-  content: url("../images/star.png");
+  content: url("../assets/images/star.png");
   position: absolute;
   top: 5px;
   right: 5px;
