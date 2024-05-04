@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
 import Banner from '@components/Banner'
+import ProjectDetails from '@components/ProjectDetails'
 
 
 export interface IProjectDetailsPageProps {}
@@ -22,7 +23,7 @@ const ProjectDetailsPage: React.FC<IProjectDetailsPageProps> = () => {
             headingClassNames={['heading-m']}
         />
       </Header>
-      {id}
+      <ProjectDetails projectID={id}/>
       <Footer/>
     </React.Fragment>
   )

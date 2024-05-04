@@ -7,6 +7,7 @@ import ProjectsSection from '@/modules/ProjectsSection'
 import BlogPresenter from '@components/BlogPresenter'
 import { articles } from '@assets/data.json'
 import Heading from '@components/Heading'
+import SiteContainer from '@/components/SiteContainer'
 
 
 export interface IHomePageProps {}
@@ -27,19 +28,20 @@ const HomePage: React.FC<IHomePageProps> = () => {
     <React.Fragment>
       <Header/>
       <Promo/>
-      <ProjectsSection/>
+      <SiteContainer classNames={['projects-area']}>
+        <ProjectsSection/>
+      </SiteContainer>
       <Counter/>
-      <div className="blog-presenter-area">
-          <div className="wrapper">
-              <section className="blog-presenter">
-                  <Heading {...blogPresenterHeadingProps}/>
-                  <BlogPresenter
-                    isCompactModeEnabled
-                    articles={articles}
-                  />
-              </section>
-          </div>
-      </div>
+      <SiteContainer classNames={['blog-presenter-area']}>
+        <section className="blog-presenter">
+          <Heading {...blogPresenterHeadingProps}/>
+          <BlogPresenter
+            isCompactModeEnabled
+            articles={articles}
+            articlesInOneRow={3}
+          />
+        </section>
+      </SiteContainer>
       <Footer/>
     </React.Fragment>
   )

@@ -11,7 +11,7 @@ import { observer } from 'mobx-react-lite'
 
 export interface IProjectListItemProps {
   item: IProjectItem
-  classNames?: string[]
+  imageClassNames?: string[]
 }
 
 const ProjectListItem: React.FC<IProjectListItemProps> = (props) => {
@@ -32,7 +32,10 @@ const ProjectListItem: React.FC<IProjectListItemProps> = (props) => {
   return (
     <figure className={`project ${isFavorite && 'project_star'}`}>
       <Button classNames={['btn', 'project-favorite-button']} handler={makeFavoriteHandler}>
-        <img className="project__image" src={new URL(`../../assets/images/gallery/${pic}`, import.meta.url).href}/>
+        <img 
+          className={`project__image ${props.imageClassNames && props.imageClassNames.join(' ')}`} 
+          src={new URL(`../../assets/images/gallery/${pic}`, import.meta.url).href}
+        />
       </Button>
       <div className="project__details">
         <div className="project__info">
