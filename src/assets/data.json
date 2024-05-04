@@ -152,5 +152,207 @@
     "Bedroom",
     "Kitchen Planning",
     "Living Area"
+  ],
+  "projects": [
+    {
+      "id": "p1001",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g1.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1002",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g2.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1003",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g3.png",
+      "isFavorite": true,
+      "isAvailable": false,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1004",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g4.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1005",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g5.png",
+      "isFavorite": true,
+      "isAvailable": false,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1006",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g6.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1007",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g7.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p1008",
+      "title": "Awesome Project",
+      "category": "Living Area",
+      "pic": "g8.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 840
+    },
+    {
+      "id": "p2001",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g8.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2002",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g7.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2003",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g6.png",
+      "isFavorite": true,
+      "isAvailable": false,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2004",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g5.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2005",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g4.png",
+      "isFavorite": true,
+      "isAvailable": false,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2006",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g3.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2007",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g2.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p2008",
+      "title": "Great Project",
+      "category": "Bedroom",
+      "pic": "g1.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 99.99,
+      "currencyCode": 978
+    },
+    {
+      "id": "p3007",
+      "title": "Well Project",
+      "category": "Kitchen",
+      "pic": "g2.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 2500,
+      "currencyCode": 643
+    },
+    {
+      "id": "p3008",
+      "title": "Well Project",
+      "category": "Kitchen",
+      "pic": "g1.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 3000,
+      "currencyCode": 643
+    },
+    {
+      "id": "p4005",
+      "title": "Modern Kitchan",
+      "category": "Kitchen Planning",
+      "pic": "g4.png",
+      "isFavorite": true,
+      "isAvailable": true,
+      "price": 10000,
+      "currencyCode": 392
+    },
+    {
+      "id": "p4006",
+      "title": "Modern Kitchan",
+      "category": "Kitchen Planning",
+      "pic": "g3.png",
+      "isFavorite": false,
+      "isAvailable": true,
+      "price": 25000,
+      "currencyCode": 392
+    }
   ]
 }

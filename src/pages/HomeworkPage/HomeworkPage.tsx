@@ -19,7 +19,7 @@ import ContentArea from '@components/ContentArea'
 export interface IHomeworkPageProps {}
 
 const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
-  const { BlogPresenterStore } = useStore()
+  const { BlogStore } = useStore()
   const [magicButtonText, setMagicButtonText] = useState('Перевернуть')
   const [title, setTitle] = useState('')
   const [category, setCategory] = useState(blogCategories[0])
@@ -34,7 +34,7 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
         date: 'recent',
       }
       setTitle('')
-      BlogPresenterStore.addArticle(newArticle)
+      BlogStore.addItem(newArticle)
     }
   }
 
@@ -88,7 +88,7 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
               </Button>
             </div>
             <BlogPresenter 
-              articles={BlogPresenterStore.filteredArticles}
+              articles={BlogStore.filteredData}
               articlesInOneRow={2}
             />
           </ContentArea>
@@ -99,8 +99,8 @@ const HomeworkPage: React.FC<IHomeworkPageProps> = () => {
                 type='checkbox'
                 name='blog-filter'
                 ownClassNames={['pick-categories']}
-                onPressHandler={(category) => BlogPresenterStore.toggleFilter(category)}
-                filter={BlogPresenterStore.filter}
+                onPressHandler={(category) => BlogStore.toggleFilter(category)}
+                filter={BlogStore.filter}
               />
             </AsideBlock>
           </AsideArea>

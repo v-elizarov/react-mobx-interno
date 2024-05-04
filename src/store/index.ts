@@ -1,8 +1,13 @@
 import { createContext, useContext } from 'react'
 import BlogPresenterStore from './BlogPresenterStore'
+import BlogStore from './BlogStore'
+import ProjectStore from './ProjectStore'
+
 
 const store = {
-  BlogPresenterStore
+  BlogPresenterStore,
+  BlogStore,
+  ProjectStore
 }
 
 export const StoreContext = createContext(store)

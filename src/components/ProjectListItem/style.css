@@ -1,0 +1,7 @@
+.project-favorite-button:hover::after {
+  content: url("../../assets/images/star.png");
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  opacity: 0.5;
+}
