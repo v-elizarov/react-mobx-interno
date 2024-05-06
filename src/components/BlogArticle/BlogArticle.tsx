@@ -3,6 +3,7 @@ import Heading from '@components/Heading'
 import { useStore } from '@/store'
 import { IBlogArticle } from '@/types/blog-article'
 import './style.css'
+import { observer } from 'mobx-react-lite'
 
 
 export interface IBlogArticleProps {
@@ -12,11 +13,9 @@ export interface IBlogArticleProps {
 const BlogArticle: React.FC<IBlogArticleProps> = (props) => {
   if (typeof props.articleID === 'undefined') return
 
-  const { BlogPresenterStore } = useStore()
+  const { BlogStore } = useStore()
 
-  
-
-  const article: IBlogArticle | undefined = BlogPresenterStore.articles.find(element => element.id === props.articleID)
+  const article: IBlogArticle | undefined = BlogStore.data.find(element => element.id === props.articleID)
 
   if (typeof article === 'undefined') return
 
@@ -74,4 +73,4 @@ const BlogArticle: React.FC<IBlogArticleProps> = (props) => {
   )
 }
 
-export default BlogArticle
+export default observer(BlogArticle) 

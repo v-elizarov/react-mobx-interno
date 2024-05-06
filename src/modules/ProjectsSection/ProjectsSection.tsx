@@ -1,9 +1,9 @@
 import React from 'react'
-import RightArrowAlternateSvg from '@assets/svg/rightArrowAlternate.svg?react'
 import Heading from '@components/Heading'
 import { useStore } from '@/store'
 import ProjectListItem from '@components/ProjectListItem'
 import './style.css'
+import { observer } from 'mobx-react-lite'
 
 
 export interface IProjectsSectionProps {}
@@ -27,7 +27,7 @@ const ProjectsSection: React.FC<IProjectsSectionProps> = () => {
         <div className="projects__container">
             <div className="projects__row">
               <ProjectListItem 
-                item={ProjectStore.getItem(0)}
+                item={ProjectStore.getItem(6)}
                 imageClassNames={['project_squared', 'project__image_top-left']}
               />
               <ProjectListItem 
@@ -50,4 +50,4 @@ const ProjectsSection: React.FC<IProjectsSectionProps> = () => {
   )
 }
 
-export default ProjectsSection
+export default observer(ProjectsSection) 

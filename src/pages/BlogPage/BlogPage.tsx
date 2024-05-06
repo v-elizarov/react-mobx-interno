@@ -19,7 +19,7 @@ import { blogCategories } from '@assets/data.json'
 export interface IBlogPageProps {}
 
 const BlogPage: React.FC<IBlogPageProps> = () => {
-  const { BlogPresenterStore } = useStore()
+  const { BlogStore } = useStore()
   const headerImageURL = new URL('../../assets/images/banners/banner1.jpg', import.meta.url)
 
   return (
@@ -46,7 +46,7 @@ const BlogPage: React.FC<IBlogPageProps> = () => {
         <DividedContainer>
           <ContentArea>
             <InfiniteBlogPresenter 
-              articles={BlogPresenterStore.filteredArticles}
+              articles={BlogStore.filteredData}
               articlesInOneRow={2}
             />
           </ContentArea>
@@ -60,8 +60,8 @@ const BlogPage: React.FC<IBlogPageProps> = () => {
                 type='checkbox'
                 name='blog-filter'
                 ownClassNames={['pick-categories']}
-                onPressHandler={(category) => BlogPresenterStore.toggleFilter(category)}
-                filter={BlogPresenterStore.filter}
+                onPressHandler={(category) => BlogStore.toggleFilter(category)}
+                filter={BlogStore.filter}
               />
             </AsideBlock>
           </AsideArea>

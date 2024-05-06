@@ -10,12 +10,12 @@ import { useNavigate } from 'react-router-dom'
 export interface ILatestPostProps {}
 
 const LatestPost: React.FC<ILatestPostProps> = () => {
-  const { BlogPresenterStore } = useStore()
+  const { BlogStore } = useStore()
   const navigate = useNavigate()
 
-  if (BlogPresenterStore.articles.length === 0) return
+  if (BlogStore.data.length === 0) return
   
-  const latestPost: IBlogArticle = BlogPresenterStore.articles[0]
+  const latestPost: IBlogArticle = BlogStore.data[0]
   
   const { id, title, pic, date } = latestPost
 
