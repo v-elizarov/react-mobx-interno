@@ -1,0 +1,16 @@
+.notfound__box {
+  width: 80%;
+  margin: 0 auto;
+  padding: 80px 40px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.notfound__link {
+  display: block;
+  margin-top: 50px;
+  text-decoration: underline;
+  font-weight: 500;
+}
