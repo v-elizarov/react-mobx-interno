@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Interno
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> ### Simple application (SPA) for home interior enjoyers. The app includes  landing page, projects gallery and simple blog with articles. User can visit the blog page and be able to select as multiple categories to sort articles. Same thing works for the project page but here we can pick only one category. To get more info about any project or read an article should go to right page with details.
 
-Currently, two official plugins are available:
+## [Try it](https://v-elizarov.github.io/react-mobx-interno/): GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Preview](/assets/preview.png)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was bootstrapped with [Vite](https://vitejs.dev/guide/)
 
-- Configure the top-level `parserOptions` property like this:
+To get this app locally:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- clone this repository
+- type `npm install` to install all req'd dependencies
+- type `npm run dev` to start the local server
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+~ runs the app in the development mode
+- check your terminal and past the link into any browser
+
+## App Environment
+
+- edit `vite.config.ts`
+
+~ edit variable `gitRepositoryName`: 
+
+its important to surround your git repo name with `/` 
+
+(one as prefix and last one as postfix): `/example/`
+
+- use aliases:
+
+Alias | Path | Comment |
+| --- | --- | --- |
+@/ | ./src/ | work directory
+@components/ | ./src/components/ | forlder with the most frequently reused components
+@assets/ | ./src/assets/ | quick access to images, styles and other project resources
+
