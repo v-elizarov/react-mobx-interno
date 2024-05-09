@@ -476,11 +476,13 @@ body {
 
 .observe-project-slider__box {
   position: relative;
+  border-radius: 50px;
+  width: 1201px;
   height: 799px;
+  overflow: hidden;
 }
 .observe-project-slider__image {
   position: absolute;
-  border-radius: 50px;
   z-index: 333;
 }
 .observe-project-slider__button {

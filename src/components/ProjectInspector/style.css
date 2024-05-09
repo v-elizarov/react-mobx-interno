@@ -1,0 +1,11 @@
+.observe-project-slider__image {
+  width: 1201px;
+  height: 799px;
+  object-fit: cover;
+}
+
+.project-inspector__image:hover {
+  width: 2402px;
+  height: 1798px;
+  cursor: crosshair;
+}
