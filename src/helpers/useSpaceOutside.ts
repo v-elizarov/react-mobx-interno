@@ -6,7 +6,7 @@ const useSpaceOutside = (
   callback: () => void
 ) => {
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = () => {
       if (ref.current) {
         callback()
       }
